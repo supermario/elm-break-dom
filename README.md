@@ -16,12 +16,12 @@ This table describes where and when an element is inserted, thanks to the discus
 
 | Plugin (Users)                        | Where in `<body>`      | When                     | Workaround (keep enabled)                                                  | Workaround (disable)                                     |     |
 | :------------------------------------ | :--------------------- | :----------------------- | :------------------------------------------------------------------------- | :------------------------------------------------------- | :-- |
-| [Google Translate][gtr] (10,000,000+) | **middle**             | translate the page       |                                                                            | `<meta name="google" content="notranslate">` in `<head>` |
-| Google Translate                      | bottom                 | select words             | [rough patch][patch], use `Browser.element`                                |                                                          |
-| [Grammarly][grammarly] (10,000,000+)  | **middle**             | focus on `<textarea>`    |                                                                            | [`data-gramm_editor="false"`][w-grammarly]               |
-| [Dark Reader][dark] (1,763,020)       | **middle (sometimes)** | laod                     | [make `<style>` the last child][w-dark], avoid using `<style>` in `<body>` |                                                          |
-| [ChromeVox][chrome-vox] (161,918)     | top                    | load, focus on something | [rough patch][patch], use `Browser.element`                                |                                                          |
-| [Viber][viber] (133,220)              | top, bottom            | load                     | [rough patch][patch], use `Browser.element`                                |                                                          |
+| [Google Translate][gtr] (10,000,000+) | **middle**             | translate the page       |                                                                            | `<meta name="google" content="notranslate">` in `<head>`      |
+| Google Translate                      | bottom                 | select words             | [rough patch][patch], use `Browser.element`                                |                                                               |
+| [Grammarly][grammarly] (10,000,000+)  | **middle**             | focus on `<textarea>`    |                                                                            | [`data-gramm_editor="false"`][w-grammarly]                    |
+| [Dark Reader][dark] (1,763,020)       | **middle (sometimes)** | laod                     | [make `<style>` the last child][w-dark], avoid using `<style>` in `<body>` | [`<meta name="darkreader-lock">` in `<head>`][w-dark-disable] |
+| [ChromeVox][chrome-vox] (161,918)     | top                    | load, focus on something | [rough patch][patch], use `Browser.element`                                |                                                               |
+| [Viber][viber] (133,220)              | top, bottom            | load                     | [rough patch][patch], use `Browser.element`                                |                                                               |
 
 [gtr]: https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb
 [grammarly]: https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen
@@ -30,6 +30,7 @@ This table describes where and when an element is inserted, thanks to the discus
 [viber]: https://chrome.google.com/webstore/detail/viber/dafalpmmoljglecaoelijmbkhpdoobmm
 [w-grammarly]: https://github.com/elm/html/issues/44#issuecomment-534665947
 [w-dark]: https://github.com/mdgriffith/elm-ui/commit/02e9919a47d50a71fbc92338a8a38def853ffa0f
+[w-dark-disable]: https://github.com/darkreader/darkreader/blob/main/CONTRIBUTING.md#disabling-dark-reader-on-your-site
 [patch]: #patch-for-browserapplication
 
 Note:
